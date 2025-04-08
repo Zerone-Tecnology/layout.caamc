@@ -60,5 +60,129 @@ body
   background-color: $accent
   color: #fff
 
+h1, h2, h3, h4, h5, h6
+  font-family: LoewNext
+
+ul
+  list-style-type: none
+  padding: 0
+  margin: 0
+
+.btn
+  display: block
+  text-align: center
+  border-radius: 15em
+  padding: 15px
+  &-full
+    background-color: $gold
+    color: #fff
+
+.header
+  .header-top
+    padding: 15px 0
+    background-color: #FFFCEB
+
+    .logo-wrap
+      img
+        width: 100%
+
+    .menu-wrap
+      ul 
+        li
+          display: inline-block
+          a
+            display: block
+            padding: 15px
+            text-transform: uppercase
+            font-size: 12px
+            font-weight: bold
+
+.header-banner
+  background-image: url('../img/header_bg.jpg')
+  background-repeat: no-repeat
+  background-size: cover
+  min-height: 650px
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    height: 80%
+    bottom: 0
+    left: 0
+    background: rgb(37,49,89)
+    background: linear-gradient(180deg, rgba(37,49,89,0) 0%, rgba(37,49,89,1) 100%)
+    z-index: 5
+  .block-wrap 
+    height: 650px
+    .block
+      position: absolute
+      z-index: 15
+    .left-wrap
+      top: 30%
+      color: #fff
+      width: 60%
+      .title, .s-title
+        margin: 0 
+        padding: 0
+        font-size: 54px
+        line-height: 1.2em
+      .title
+        text-transform: uppercase
+      .btn
+        margin-top: 25px
+        display: inline-block
+        padding: 15px 25px
+    .right-wrap
+      left: 60%
+      top: 60%
+    .bg-girl
+      position: absolute
+      z-index: 5
+      left: 50%
+      bottom: 0
+      img
+        width: 100%
+
+.section
+  padding: 55px 0
+  &.color
+    background-color: $accent
+    color: #fff
+  .title
+    color: $gold
+    font-size: 54px
+    text-transform: uppercase
+    margin-top: 0
+  &.sec-1
+    .left-wrap
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+    .timer-wrap
+      .block-wrap
+        display: flex
+        .block
+          padding-right: 25px
+          color: $gold
+          &:last-child
+            padding-right: 0
+          .num
+            font-size: 74px
+            font-weight: bold
+            line-height: 1em
+            color: #fff
+    .about-wrap
+      font-size: 16px
+      .block-wrap
+        .block
+          font-size: 20px
+          span
+            color: $gold
+            font-size: 16px
+          p
+            margin-top: 0
+    
+
 // Всегда в конце
 @import media
