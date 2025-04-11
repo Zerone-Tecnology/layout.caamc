@@ -76,17 +76,29 @@ ul
   &-full
     background-color: $gold
     color: #fff
+  &-full-w
+    background-color: #fff
+    color: #000
+.row-eq-heigh
+  display: flex
+a.btn
+  pointer-events: none
+  cursor: default
+  text-decoration: none
+  color: black
 
 .header
   .header-top
     padding: 15px 0
     background-color: #FFFCEB
-
     .logo-wrap
       img
         width: 100%
 
     .menu-wrap
+      height: 100%
+      display: flex
+      align-items: center
       ul 
         li
           display: inline-block
@@ -96,6 +108,16 @@ ul
             text-transform: uppercase
             font-size: 12px
             font-weight: bold
+            transition: all .3s ease-in-out
+            &:hover
+              text-decoration: none
+              color: $gold
+    .right-wrap
+      height: 100%
+      display: flex
+      align-items: center
+      .btn
+        padding: 15px 35px
 
 .header-banner
   background-image: url('../img/header_bg.jpg')
@@ -149,40 +171,322 @@ ul
   &.color
     background-color: $accent
     color: #fff
+    .title
+      color: #fff
+  &.color-2
+    background-color: $gold
+    color: $accent
+    .title
+      color: $accent
+  &.color-3
+    background-image: url('../img/sec_bg.png')
+    background-size: cover
+    .title
+      color: $accent
   .title
-    color: $gold
     font-size: 54px
     text-transform: uppercase
     margin-top: 0
-  &.sec-1
-    .left-wrap
+    line-height: 1.2em
+
+.sec-1
+  .left-wrap
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .title
+      color: $gold
+  .timer-wrap
+    .block-wrap
       display: flex
-      flex-direction: column
-      justify-content: space-between
-    .timer-wrap
-      .block-wrap
-        display: flex
-        .block
-          padding-right: 25px
+      .block
+        padding-right: 25px
+        color: $gold
+        &:last-child
+          padding-right: 0
+        .num
+          font-size: 74px
+          font-weight: bold
+          line-height: 1em
+          color: #fff
+  .about-wrap
+    font-size: 16px
+    .block-wrap
+      .block
+        font-size: 20px
+        span
           color: $gold
-          &:last-child
-            padding-right: 0
-          .num
-            font-size: 74px
-            font-weight: bold
-            line-height: 1em
-            color: #fff
-    .about-wrap
-      font-size: 16px
-      .block-wrap
-        .block
-          font-size: 20px
-          span
-            color: $gold
-            font-size: 16px
-          p
-            margin-top: 0
-    
+          font-size: 16px
+        p
+          margin-top: 0
+.sec-2
+  position: relative
+  &::after
+    content: ''
+    background-image: url('../img/bg_1.png')
+    width: 50%
+    height: 100%
+    position: absolute
+    top: 0
+    right: 0
+    z-index: 15
+  .title
+    font-size: 40px
+  .content-wrap
+    padding: 75px 0
+  .text-wrap
+    width: 70%
+    line-height: 1.2em
+
+.sec-3
+  .block-wrap
+    display: flex
+    .block
+      font-size: 14px
+      color: $accent
+      width: calc(25% - 10px)
+      margin-right: 10px
+      .img-wrap
+        display: flex
+        background-color: $gold
+        border-radius: 20px
+        min-height: 250px
+        align-items: flex-end
+      .b-title
+        font-size: 24px
+        color: $accent
+        margin: 0
+      .brand
+        color: $gold
+        text-transform: uppercase
+      &.soon
+        .img-wrap          
+          background-color: transparent
+          border: 3px solid $gold
+          align-items: center
+          justify-content: center
+          font-size: 40px
+          font-weight: bold
+          color: $gold
+.sec-4
+  position: relative
+  &::after
+    content: ''
+    background-image: url('../img/bg_2.png')
+    background-size: cover
+    width: 50%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 15
+  .content-wrap
+    padding: 55px 0 55px 75px
+    .logo-wrap
+      width: 80%
+      img
+        width: 100%
+  .title
+    color: #fff
+    margin: 25px 0
+  .btn
+    margin: 25px 0
+    padding: 15px 55px
+    display: inline-block
+
+.sec-5
+  .title
+    margin-bottom: 15px
+  .btn
+    display: inline-block
+    padding: 15px 25px
+  .content-wrap
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+    height: 100%
+  .block-wrap
+    margin-top: 55px
+    .block
+      &.soon
+        min-height: 150px
+        border-radius: 20px
+        border: 3px solid $gold
+        margin: 15px 0
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 40px
+        text-transform: uppercase
+        font-weight: bold
+        color: $gold
+.sec-6
+  .block-wrap
+    .block
+      // width: 25%
+      min-height: 220px
+      overflow: hidden
+      border-radius: 20px
+      margin: 0 15px 15px 0
+      img
+        width: auto
+        height: 100%
+.sec-7
+  .block-wrap
+    display: flex
+    flex-wrap: wrap
+    .block
+      width: 25%
+      padding: 15px
+      font-size: 14px
+      line-height: 1.2em
+      .icon
+        width: 48px
+        height: 48px
+        border-radius: 50%
+        background-color: $gold
+        color: #fff
+        display: flex
+        align-items: center
+        justify-content: center
+      &.last
+        width: 50%
+        background-image: url('../img/bg_1.png')
+        background-size: cover
+        color: #fff
+        border-radius: 20px
+        position: relative
+        overflow: hidden
+        .content-wrap
+          position: relative
+          display: block
+          z-index: 5
+          .btn
+            display: inline-block
+            padding: 15px 25px
+        &::after
+          content: ''
+          position: absolute
+          background-color: #000
+          opacity: 0.75
+          width: 100%
+          height: 100%
+          top: 0
+          left: 0
+.sec-8
+  .block-wrap
+    .block
+      position: relative
+      padding: 25px
+      border-radius: 20px
+      overflow: hidden
+      margin-bottom: 15px
+      &::after
+        content: ''
+        position: absolute
+        opacity: .75
+        height: 100%
+        width: 100%
+        top: 0
+        left: 0
+      .content-wrap, .title, .btn
+        display: block
+        position: relative
+        z-index: 5
+      .btn
+        display: inline-block
+        padding: 15px 25px
+      &.color-1
+        background-color: $gold
+        background-image: url('../img/bg_2.png')
+        background-size: cover
+        color: #fff
+        &::after
+          background-color: $gold
+      &.color-2
+        background-color: $accent
+        background-image: url('../img/bg_2.png')
+        background-size: cover
+        color: #fff
+        &::after
+          background-color: $accent
+          opacity: .85
+      .title
+        color: #fff
+      .img-wrap
+        background-color: #D9D9D9
+        border-radius: 20px
+        overflow: hidden
+        img
+          width: 100%
+      .content-wrap
+        h6
+          font-size: 24px
+          margin: 0
+        p
+          margin-bottom: 0
+
+.sec-9
+  .title
+    color: $gold
+  .block-wrap
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 55px
+    .block
+      width: 25%
+      img
+        width: auto
+
+.sec-10
+  .block-wrap
+    background-color: $gold
+    background-image: url('../img/bg_1.png')
+    background-size: cover
+    color: #fff
+    border-radius: 20px
+    position: relative
+    overflow: hidden
+    padding: 25px
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-color: #C27C1C
+      opacity: .8
+      z-index: 0
+    .content-wrap
+      z-index: 10
+      position: relative
+      display: block
+
+.footer
+  font-size: 16px
+  padding-bottom: 25px
+  .footer-wrap
+    display: flex
+    border-top: 1px solid #fff
+    border-bottom: 1px solid #fff
+  .logo-wrap
+    width: 250px
+    margin: 55px 0
+    img
+      width: 100%
+  .b-title
+    color: $gold
+    text-transform: uppercase
+    margin: 0
+  a
+    color: #fff
+  .content-wrap
+    margin: 55px 0
+  .footer-bottom
+    padding-top: 25px
+    display: flex
+    justify-content: space-between
 
 // Всегда в конце
 @import media
