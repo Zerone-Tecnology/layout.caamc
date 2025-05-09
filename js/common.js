@@ -1,5 +1,51 @@
 $(function() {
 
+	if (screen.width <= 768) {
+		document.addEventListener(
+			"click",
+			function(e) {
+				if (!e.target.closest(".mobile-container") && !e.target.closest(".btn-open")) {
+					$('.mobile-container').css('display', 'none');
+				}
+			},
+			false
+		)
+	};
+
+	$('#mmWrap').on('click', function(){
+		$('.mobile-container').css('display', 'none');
+		console.info('click');
+	});
+
+	new WOW().init();
+
+	$('.btn-open').on('click', function(){
+		$('.mobile-container').css('display', 'block');
+	})
+	$('.btn-close').on('click', function(){
+		$('.mobile-container').css('display', 'none');
+	})
+
+	$('.tab-nav .tab-link').on('click', function(){
+		$('.tab-nav .tab-link').removeClass('active');
+		$('.tab-content .content.parent').removeClass('active');
+		var tab = $(this).attr('data-tab');
+
+		$(this).addClass('active');
+		$(tab).addClass('active');
+	});
+
+	$('.tab-nav.sub div').on('click', function(){
+		$('.tab-nav.sub div').removeClass('active');
+		$('.tab-content.sub .content').removeClass('active');
+		var tab = $(this).attr('data-tab');
+
+		$(this).addClass('active');
+		$(tab).addClass('active');
+	});
+
+	$(".menu-wrap ul").clone().appendTo("#mmWrap");
+
 	var countDownDate = new Date("Sep 23, 2025 09:00:00").getTime();
 	// Update the count down every 1 second
 	var x = setInterval(function() {
@@ -41,13 +87,19 @@ $(function() {
 		dots: false,
 		responsive: {
 			0:{
-				items: 1
+				items: 1,
+				stagePadding: 0
 			},
 			480:{
-				items: 2
+				items: 1,
+				stagePadding: 0
+			},
+			766:{
+				items: 2,
+				stagePadding: 50
 			},
 			992:{
-				items: 3
+				items: 2
 			},
 			1280:{
 				items: 4
@@ -63,16 +115,24 @@ $(function() {
 		smartSpeed: 2000,
 		responsive: {
 			0:{
-				items: 1
+				items: 1,
+				stagePadding: 0
 			},
 			480:{
-				items: 2
+				items: 1,
+				stagePadding: 0
+			},
+			766:{
+				items: 2,
+				stagePadding: 50
 			},
 			992:{
-				items: 3
+				items: 2,
+				stagePadding: 50
 			},
 			1280:{
-				items: 4
+				items: 4,
+				stagePadding: 100
 			}
 		},
 		autoplay: true,

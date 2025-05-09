@@ -4,23 +4,217 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-  /**/
+  .header .header-top .right-wrap .btn
+    padding: 15px
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
-  /**/
+  
+  .row-eq-heigh
+    flex-wrap: wrap
 
+  .section 
+    .title
+      font-size: 46px
+
+  .header 
+    .header-top
+      position: fixed
+      z-index: 25
+      width: 100%
+      .logo-wrap img
+        width: 140px
+      .menu-wrap
+        display: none
+
+  .header-banner 
+    padding-top: 110px
+    .block-wrap 
+      .left-wrap
+        width: 100%
+        position: relative
+        top: 10%
+        .title
+          font-size: 42px
+        .s-title
+          font-size: 32px
+      .right-wrap
+        width: 100%
+        position: relative
+        left: auto
+        top: 45%
+        text-align: center
+        .logo-wrap
+          width: 60%
+          margin: auto
+          img
+            width: 100%
+      .bg-girl
+        left: 0
+
+  .mmenu-wrap
+    display: flex
+    flex-wrap: wrap
+    height: 100%
+    align-content: center
+    justify-content: flex-end
+    .btn-mmenu
+      font-weight: bold
+      color: $accent
+      font-size: 16px
+    .icon
+      width: 50px
+      height: 50px
+      background-color: $gold
+      margin-left: 15px
+      border-radius: 50%
+
+  .sec-1 
+    .timer-wrap 
+      .block-wrap
+        .block
+          .num
+            font-size: 62px
+
+  .sec-2
+    padding-bottom: 500px
+    &::after
+      width: 100%
+      top: auto
+      max-height: 500px
+    .text-wrap
+      width: 100%
+
+  .sec-3 
+    .block-wrap 
+      flex-wrap: wrap
+      .block
+        width: calc(33% - 10px)
+
+  .sec-4
+    padding-top: 500px
+    &::after
+      width: 100%
+      top: 0
+      max-height: 500px
+    .content-wrap
+      padding-left: 0
+
+  .sec-7 
+    .block-wrap 
+      .block
+        width: 50%
+        &.last
+          width: 100%
+
+  .sec-9 
+    .block-wrap 
+      .block
+        width: 50%
+
+  .sec-10 
+    .tab-content 
+      #tab1
+        &::before
+          display: none
+      .content
+        .form, form
+          width: 100%
+          .input
+            width: 100%
+        .right-wrap
+          width: 100%
+          .content-wrap
+            .img-wrap
+              max-width: 250px
+
+  .sec-11 .block-wrap .block
+    width: calc( 50% - 15px )
+    margin-bottom: 15px
+
+  .footer .footer-wrap
+    flex-wrap: wrap
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-  /**/
+  
+  .section .title
+    font-size: 38px
 
+  .header-banner 
+    .block-wrap 
+      .bg-girl img
+        width: 100%
+  
+    .right-wrap
+      top: 60%
+
+  .sec-1 .left-wrap
+    flex-direction: column-reverse
+  
+  .sec-3 
+    .block-wrap 
+      .block
+        width: calc(50% - 10px)
+  .sec-7 
+    .block-wrap 
+      .block
+        width: 100%
+  .sec-9 
+    .block-wrap 
+      .block
+        width: 100%
+        text-align: center
+  .sec-10 
+    .tabs-wrap 
+      .tab-nav
+        flex-wrap: wrap
+        div
+          width: 100%
+          margin-bottom: 15px
+  
+  .footer .footer-bottom
+    flex-wrap: wrap
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-  /**/
+  
+  .section .title
+    font-size: 32px
+  .header-banner 
+    .block-wrap 
+      .left-wrap 
+        .title
+          font-size: 34px
+        .s-title
+          font-size: 28px
+      .right-wrap
+    top: 40%
 
+  .sec-3 
+    .block-wrap
+      .block
+        width: 100%
+        .img-wrap
+          height: auto
+  
+  .sec-8 .block-wrap 
+    .items-wrap
+      flex-direction: column
+      .item
+        width: 100%
+        margin-bottom: 15px
+    .btn
+      margin-top: 25px
+
+  .sec-11 
+    .block-wrap
+      flex-wrap: wrap
+      .block
+        flex-direction: column
+        width: 100%
+        margin-bottom: 15px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
